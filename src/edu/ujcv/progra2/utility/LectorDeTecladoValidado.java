@@ -6,7 +6,7 @@ package edu.ujcv.progra2.utility;
 //        LectorDeTecladoValidado LDTV = LectorDeTecladoValidado.getInstance();
 //        double x = LDTV.getDouble("ingrese un numero real","intente de nuevo");
 //        System.out.println("su numero es: "+ x);
-
+/*
 import java.util.Scanner;
 
 public class LectorDeTecladoValidado {
@@ -66,4 +66,6 @@ public class LectorDeTecladoValidado {
         return sc.nextInt();
 
     }
-}
+
+ */
+

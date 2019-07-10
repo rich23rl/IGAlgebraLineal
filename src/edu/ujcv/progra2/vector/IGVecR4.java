@@ -39,8 +39,10 @@ public class IGVecR4 {
         //TODO: implementar
         return 0.0;
     }
-
+/*
     public double magnitud(){
         return Math.sqrt(productoPunto(this));
     }
+
+ */
 }

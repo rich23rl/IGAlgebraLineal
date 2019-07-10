@@ -42,7 +42,7 @@ public class IGVecR3 {
         return 0.0;
     }
 
-    public double magnitud(){
-        return Math.sqrt(productoPunto(this));
-    }
+    //public double magnitud(){
+        //return Math.sqrt(productoPunto(this));
+   // }
 }
