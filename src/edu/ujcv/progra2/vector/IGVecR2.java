@@ -71,4 +71,19 @@ public class IGVecR2 {
         r = Math.acos(a.productoPunto(b)/(magnitud(a)*magnitud(b)));
         return Math.toDegrees(r);
     }
+    public double getX (){
+        return x;
+    }
+
+    public void setX (double x){
+        this.x = x;
+    }
+
+    public double getY (){
+        return y;
+    }
+
+    public void setY (double y){
+        this.y = y;
+    }
 }
