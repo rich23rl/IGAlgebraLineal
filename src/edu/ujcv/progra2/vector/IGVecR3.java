@@ -64,10 +64,38 @@ public class IGVecR3 {
         r.z = (x * b.y) - (y * b.x);
         return r;
     }
-    
-    public double angulo(IGVecR3 b){
-        //TODO: implementar
-        return 0.0;
+    public double magnitud(IGVecR3 b){
+        return  Math.sqrt((Math.pow(b.x,2) + Math.pow(b.y,2) + Math.pow(b.z,2)));
+    }
+
+    public double angulo(IGVecR3 a, IGVecR3 b){
+        double r;
+        r = Math.acos(a.productoPunto(b)/(magnitud(a)*magnitud(b)));
+        return Math.toDegrees(r);
+    }
+
+    public double getX (){
+        return x;
+    }
+
+    public void setX (double x){
+        this.x = x;
+    }
+
+    public double getY (){
+        return y;
+    }
+
+    public void setY (double y){
+        this.y = y;
+    }
+
+    public double getZ (){
+        return z;
+    }
+
+    public void setZ (double z) {
+        this.z = z;
     }
 
 }
