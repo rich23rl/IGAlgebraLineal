@@ -22,7 +22,6 @@ public class MenVec {
     public int operacionesR2(int opcion) {
         switch (opcion) {
             case 1:
-
                 IGVecR2 A1 = LeerVecR2("Ingrese el vector 1", "NO válido. Ingrese una opcion valida");
                 IGVecR2 B1 = LeerVecR2("Ingrese el vector 2", "NO válido. Ingrese una opcion valida" );
                 IGVecR2 res = A1.suma(B1);
@@ -94,7 +93,6 @@ public class MenVec {
     public int operacionesR3(int opcion) {
         switch (opcion) {
             case 1:
-
                 IGVecR3 A1 = LeerVecR3("Ingrese el vector 1", "NO válido. Ingrese una opcion valida");
                 IGVecR3 B1 = LeerVecR3("Ingrese el vector 2", "NO válido. Ingrese una opcion valida" );
                 IGVecR3 res = A1.suma(B1);
@@ -174,7 +172,6 @@ public class MenVec {
     public int operacionesR4(int opcion) {
         switch (opcion) {
             case 1:
-
                 IGVecR4 A1 = LeerVecR4("Ingrese el vector 1", "NO válido. Ingrese una opcion valida");
                 IGVecR4 B1 = LeerVecR4("Ingrese el vector 2", "NO válido. Ingrese una opcion valida" );
                 IGVecR4 res = A1.suma(B1);
