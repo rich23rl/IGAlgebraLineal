@@ -66,6 +66,7 @@ public class IGVecR2 {
         r = Math.acos(a.productoPunto(b)/(magnitud(a)*magnitud(b)));
         return Math.toDegrees(r);
     }
+
     public double getX (){
         return x;
     }
