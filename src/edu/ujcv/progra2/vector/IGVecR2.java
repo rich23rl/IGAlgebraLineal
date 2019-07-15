@@ -28,7 +28,6 @@ public class IGVecR2 {
         IGVecR2 r=new IGVecR2();
         r.x=x+b.x;
         r.y=y+b.y;
-        //TODO: implementar
         return r;
     }
 
@@ -36,16 +35,13 @@ public class IGVecR2 {
         IGVecR2 r=new IGVecR2();
         r.x=x-b.x;
         r.y=y-b.y;
-        //TODO: implementar
         return r;
     }
 
-    //producto.
     public  IGVecR2 escalarPorVector(double alpha){
         IGVecR2 r = new IGVecR2();
         r.x=alpha*x;
         r.y=alpha*y;
-        //TODO: implementar
         return r;
     }
 
@@ -54,7 +50,6 @@ public class IGVecR2 {
         r.x=x*b.x;
         r.y=y*b.y;
         double ret=r.x+r.y;
-        //TODO: implementar
         return ret;
     }
 
