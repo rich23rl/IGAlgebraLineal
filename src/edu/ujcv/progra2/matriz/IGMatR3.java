@@ -32,7 +32,7 @@ public class IGMatR3 {
         r.setCol1(this.col1.suma(b.col1));
         r.setCol1(this.col2.suma(b.col2));
         r.setCol1(this.col3.suma(b.col3));
-        return r; 
+        return r;
     }
 
     public IGMatR3 resta (IGMatR3 b){
