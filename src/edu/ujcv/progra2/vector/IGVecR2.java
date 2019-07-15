@@ -62,4 +62,13 @@ public class IGVecR2 {
         return  Math.sqrt((Math.pow(b.x,2)+ Math.pow(b.y,2)));
     }
 
+    public double magnitud(){
+        return Math.sqrt((Math.pow(x,2)+Math.pow(y,2)));
+    }
+
+    public double angulo(IGVecR2 a, IGVecR2 b){
+        double r;
+        r = Math.acos(a.productoPunto(b)/(magnitud(a)*magnitud(b)));
+        return Math.toDegrees(r);
+    }
 }
