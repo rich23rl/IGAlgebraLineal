@@ -12,8 +12,24 @@ public class IGVecR3 {
         this.z = 0;
     }
 
+    public IGVecR3 (double x, double y, double z){
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    public IGVecR3 (IGVecR3 b){
+        this.x = b.x;
+        this.y = b.y;
+        this.z = b.z;
+    }
+
     public IGVecR3 suma(IGVecR3 b){
-        return new IGVecR3();
+        IGVecR3 r = new IGVecR3();
+        r.x = x + b.x;
+        r.y = y + b.y;
+        r.z = z + b.z;
+        return r;
     }
 
     public IGVecR3 resta(IGVecR3 b){
@@ -32,13 +48,10 @@ public class IGVecR3 {
         return 0.0;
     }
 
-
-
     public IGVecR3 productoCruz(IGVecR3 b){
 
         return new IGVecR3();
     }
-
 
     public double determinante(){
         //TODO: implementar
@@ -50,7 +63,4 @@ public class IGVecR3 {
         return 0.0;
     }
 
-    //public double magnitud(){
-        //return Math.sqrt(productoPunto(this));
-   // }
 }
