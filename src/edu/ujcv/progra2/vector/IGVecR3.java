@@ -33,31 +33,38 @@ public class IGVecR3 {
     }
 
     public IGVecR3 resta(IGVecR3 b){
-        //TODO: implementar
-        return new IGVecR3();
+        IGVecR3 r = new IGVecR3();
+        r.x = x - b.x;
+        r.y = y - b.y;
+        r.z = z - b.z;
+        return r;
     }
 
-    //producto.
     public  IGVecR3 escalarPorVector(double alpha){
-        //TODO: implementar
-        return new IGVecR3();
+        IGVecR3 r = new IGVecR3();
+        r.x = alpha * x;
+        r.y = alpha * y;
+        r.z = alpha * z;
+        return r;
     }
 
     public double productoPunto(IGVecR3 b){
-        //TODO: implementar
-        return 0.0;
+        IGVecR3 r = new IGVecR3();
+        r.x = x * b.x;
+        r.y = y * b.y;
+        r.z = z * b.z;
+        double ret = r.x + r.y +r.z;
+        return ret;
     }
 
     public IGVecR3 productoCruz(IGVecR3 b){
-
-        return new IGVecR3();
+        IGVecR3 r = new IGVecR3();
+        r.x = (y * b.z) - (z * b.y);
+        r.y = (x * b.z) - (z * b.x);
+        r.z = (x * b.y) - (y * b.x);
+        return r;
     }
-
-    public double determinante(){
-        //TODO: implementar
-        return 0.0;
-    }
-
+    
     public double angulo(IGVecR3 b){
         //TODO: implementar
         return 0.0;
