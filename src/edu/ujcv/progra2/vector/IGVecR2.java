@@ -1,6 +1,16 @@
 package edu.ujcv.progra2.vector;
 
 public class IGVecR2 {
+    /*
+    Privado los datos
+    Un escalar que represente 'x' y 'y' los componentes del vector
+    Publico los constructores por defecto, copia, y conveniencia. recuerden a bob
+    Publico accesoras y mutadoras
+    Publico interfase
+    this es el vector a
+    c.x = a.x + b.x
+    c.y = a.y + b.y
+    */
     private double x;
     private double y;
 
@@ -16,14 +26,7 @@ public class IGVecR2 {
         this.x=b.x;
         this.y=b.y;
     }
-    //privado los datos
-    // un escalar que represente 'x' y 'y' los componentes del vector
-    // publico los constructores por defecto, copia, y conveniencia. recuerden a bob
-    // publico accesoras y mutadoras
-    //publico interfase
-    //this es el vector a
-    // c.x = a.x + b.x
-    // c.y = a.y + b.y
+
     public IGVecR2 suma(IGVecR2 b){
         IGVecR2 r=new IGVecR2();
         r.x=x+b.x;
