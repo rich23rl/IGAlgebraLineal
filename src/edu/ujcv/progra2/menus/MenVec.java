@@ -168,7 +168,7 @@ public class MenVec {
 
     public int leerOpcionR4(){
         opcion = lec.getInteger(" Ingrese una Opcion" , " Ingrese una opcion valida, Ingrese de Nuevo");
-        return opcion; 
+        return opcion;
     }
 
     public int operacionesR4(int opcion) {
