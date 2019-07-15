@@ -1,6 +1,32 @@
 package edu.ujcv.progra2.vector;
 
 public class IGVecR4 {
+
+    double x;
+    double y;
+    double z;
+    double a;
+
+    public IGVecR4(){
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+        this.a = 0;
+    }
+
+    public IGVecR4(double x, double y, double z, double a){
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.a = a;
+    }
+
+    public IGVecR4(IGVecR4 b){
+        this.x = b.x;
+        this.y = b.y;
+        this.z = b.z;
+        this.a = b.a;
+    }
     
     public IGVecR4 suma(IGVecR4 b){
         //TODO: implementar
