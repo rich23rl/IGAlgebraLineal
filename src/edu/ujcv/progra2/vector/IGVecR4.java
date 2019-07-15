@@ -27,48 +27,51 @@ public class IGVecR4 {
         this.z = b.z;
         this.a = b.a;
     }
-    
+
     public IGVecR4 suma(IGVecR4 b){
-        //TODO: implementar
-        return new IGVecR4();
+        IGVecR4 r = new IGVecR4();
+        r.x = x + b.x;
+        r.y = y + b.y;
+        r.z = z + b.z;
+        r.a = a + b.a;
+        return r;
     }
 
     public IGVecR4 resta(IGVecR4 b){
-        //TODO: implementar
-        return new IGVecR4();
+        IGVecR4 r = new IGVecR4();
+        r.x = x - b.x;
+        r.y = y - b.y;
+        r.z = z - b.z;
+        r.a = a - b.a;
+        return r;
     }
 
-    //producto.
     public  IGVecR4 escalarPorVector(double alpha){
-        //TODO: implementar
-        return new IGVecR4();
+        IGVecR4 r = new IGVecR4();
+        r.x = alpha * x;
+        r.y = alpha * y;
+        r.z = alpha * z;
+        r.a = alpha * a;
+        return r;
     }
 
     public double productoPunto(IGVecR4 b){
-        //TODO: implementar
-        return 0.0;
+        IGVecR4 r = new IGVecR4();
+        r.x = x * b.x;
+        r.y = y * b.y;
+        r.z = z * b.z;
+        r.a = a * b.a;
+        double ret = r.x + r.y + r.z + r.a;
+        return ret;
     }
 
-
-    // no esta definido en R4.!!!!!
-    //public IGVecR4 productoCruz(IGVecR4 b){
-
-    //}
-
-
-    public double determinante(){
-        //TODO: implementar
-        return 0.0;
+    public double magnitud(IGVecR4 b){
+        return  Math.sqrt((Math.pow(b.x,2) + Math.pow(b.y,2) + Math.pow(b.z,2) + Math.pow(b.a,2)));
     }
 
     public double angulo(IGVecR4 b){
         //TODO: implementar
         return 0.0;
     }
-/*
-    public double magnitud(){
-        return Math.sqrt(productoPunto(this));
-    }
 
- */
 }
