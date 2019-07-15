@@ -11,7 +11,7 @@ public class MenVec {
     public void mostOpcionR2(){
         System.out.println("\t\t Vectores en R2 ");
         System.out.println("\t Operaciones ");
-        System.out.println("1.- Suma, \n2.- Resta \n3.- Multiplicacion por Escalar \n4.- Producto Punto \n5.- Magnitud  \n6.- Anuglo \n7.- volver al Menu");
+        System.out.println("1.- Suma \n2.- Resta \n3.- Multiplicacion por Escalar \n4.- Producto Punto \n5.- Magnitud  \n6.- Anuglo \n7.- volver al Menu");
     }
 
     public int leerOpcionR2(){

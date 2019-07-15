@@ -9,10 +9,8 @@ public class MenuPrincipal {
 
     public void mostrarOpciones (){
 
-        System.out.println(" Calculadora de Algebra Lineal");
-        System.out.println("\n 1. Vectores");
-        System.out.println("\n 2.  Matrices");
-        System.out.println("\n 3. Salir");
+        System.out.println("\t\tCalculadora de Algebra Lineal");
+        System.out.println("1.- Vectores \n2.- Matrices \n3.- Salir");
     }
     public int leerOpciones(){
         opcion = l.getInteger("ingrese una opcion", "Usted ingreso una opcion no valida");
@@ -32,7 +30,7 @@ public class MenuPrincipal {
                 break;
 
             case 3:
-                System.out.println("Gracias por utilizar la calculadora");
+                System.out.println("Ha Salido");
                 break;
         }
 

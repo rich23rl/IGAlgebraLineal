@@ -12,27 +12,20 @@ public class MenMat {
     LectorDeTecladoValidado lec = LectorDeTecladoValidado.getInstance();
 
     public void mostrarOpcionesMatR2 (){
-        System.out.println("Matrices de orden 2");
-        System.out.println("\n 1. suma");
-        System.out.println("\n 2. resta");
-        System.out.println("\n 3. Multiplicación");
-        System.out.println("\n 4. Multiplicación por vector");
-        System.out.println("\n 5. Multiplicación por escalar");
-        System.out.println("\n 6. Rotación");
-        System.out.println("\n 7. Regresar");
-
+        System.out.println("Matrices de O2");
+        System.out.println("1.- Suma \n2.- Resta \n3.- Multiplicación Normal \n4.- Multiplicación por Vector \n5.- Multiplicación por Escalar \n6.- Rotación \n7.- Regresar") ;
     }
 
     public int leerOpcionMatR2 (){
-        opcion = lec.getInteger("Ingrese una opcion", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
+        opcion = lec.getInteger("Ingrese una opcion", "NO válido. Ingrese una opcion valida");
         return opcion;
     }
     public int operandoMatR2 (int opcion){
         switch (opcion){
 
             case 1:
-                IGMatR2 mat1 = leerMatR2("Matriz 1", "Ingrese la matriz 1", "EL caracter que ingreso NO es válido. Por favor vuelva a intentar");
-                IGMatR2 mat2 = leerMatR2("Matriz 2", "Ingrese la matriz 2", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
+                IGMatR2 mat1 = leerMatR2("Matriz 1", "Ingrese la matriz 1", "NO válido. Ingrese una opcion valida");
+                IGMatR2 mat2 = leerMatR2("Matriz 2", "Ingrese la matriz 2", "NO válido. Ingrese una opcion valida");
                 IGMatR2 o = mat1.suma(mat2);
 
                 System.out.println("La suma de matrices es:");
@@ -40,8 +33,8 @@ public class MenMat {
                 break;
 
             case 2:
-                IGMatR2 mat3 = leerMatR2("Matriz 1", "Ingrese la matriz 1","El caracter que ingreso NO es válido. Por favor intente de nuevo");
-                IGMatR2 mat4 = leerMatR2("Matriz 2", "Ingrese la matriz 2", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
+                IGMatR2 mat3 = leerMatR2("Matriz 1", "Ingrese la matriz 1", "NO válido. Ingrese una opcion valida");
+                IGMatR2 mat4 = leerMatR2("Matriz 2", "Ingrese la matriz 2", "NO válido. Ingrese una opcion valida");
                 IGMatR2 o2 = mat3.resta(mat4);
 
                 System.out.println("la resta de marices es: ");
@@ -49,8 +42,8 @@ public class MenMat {
                 break;
 
             case 3:
-                IGMatR2 mat6 = leerMatR2("Matriz 1", "Ingrese la matriz 1", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
-                IGMatR2 mat7 = leerMatR2("Matriz 2", "Ingrese la matriz 2", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
+                IGMatR2 mat6 = leerMatR2("Matriz 1", "Ingrese la matriz 1", "NO válido. Ingrese una opcion valida");
+                IGMatR2 mat7 = leerMatR2("Matriz 2", "Ingrese la matriz 2", "NO válido. Ingrese una opcion valida");
                 IGMatR2 o3 = mat6.mul(mat7);
 
                 System.out.println("La multiplicacion de matrices es: ");
@@ -59,8 +52,8 @@ public class MenMat {
             case 4:
                 IGMatR2 mat8 = leerMatR2("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
                 IGVecR2 v = new IGVecR2(0,1);
-                v.setX(lec.getDouble("Ingrese el primer numero vector","Error! Ha ingresado un caracter no valido"));
-                v.setY(lec.getDouble("Ingrese el segundo numero vector","Error! Ha ingresado un caracter no valido"));
+                v.setX(lec.getDouble("Ingrese el primer numero vector", "NO válido. Ingrese una opcion valida"));
+                v.setY(lec.getDouble("Ingrese el segundo numero vector","NO válido. Ingrese una opcion valida"));
                 IGVecR2 o4 = mat8.mulvector(v);
 
                 System.out.println("La multiplicacion de matriz por vector es \n" );
@@ -70,8 +63,8 @@ public class MenMat {
 
             case 5:
                 double alpha = 0;
-                alpha = lec.getDouble("Ingrese el escalar", "El caracter que ingreso NO es valido. Por favor vuelva a intentar");
-                IGMatR2 mat9 = leerMatR2("Matriz 1", "Ingrese la matriz 1", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
+                alpha = lec.getDouble("Ingrese el escalar", "NO válido. Ingrese una opcion valida");
+                IGMatR2 mat9 = leerMatR2("Matriz 1", "Ingrese la matriz 1", "NO válido. Ingrese una opcion valida");
                 IGMatR2 o5 = mat9.escalarXmat(alpha);
 
                 System.out.println("La multiplicacion por un escalar es:\n ");
@@ -93,16 +86,8 @@ public class MenMat {
         return opcion;
     }
     public void mostrarOpcionesMatR3() {
-        System.out.println("\t Matrices de orden 3");
-        System.out.println("\n 1.Suma");
-        System.out.println("\n 2.Resta");
-        System.out.println("\n 3. Multiplicacion por un escalar");
-        System.out.println("\n 4. Multiplicacion por un vector");
-        System.out.println("\n 5. Multiplicacion por una matriz");
-        System.out.println("\n 6. Rotación en X");
-        System.out.println("\n 7. Rotación en Y");
-        System.out.println("\n 8. Rotación en Z");
-        System.out.println("\n 9. Regresar");
+        System.out.println("\t Matrices de O3");
+        System.out.println("1.- Suma \n2.- Resta \n3.- Multiplicacion por un Escalar \n4.- Multiplicacion por un Vector \n5.- Multiplicacion por una Matriz \n6.- Rotación en X \n7.- Rotación en Y \n8.- Rotación en Z \n9.- Regresar");
     }
 
     public int leerOpcionesMatR3() {
@@ -113,8 +98,8 @@ public class MenMat {
     public int procesarOpcionMatR3(int opcion) {
         switch (opcion) {
             case 1:
-                IGMatR3 mat1 = leerMatR3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
-                IGMatR3 mat2 = leerMatR3("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                IGMatR3 mat1 = leerMatR3("Matriz 1", "Ingrese la matriz 1",    "NO válido. Ingrese una opcion valida");
+                IGMatR3 mat2 = leerMatR3("\n Matriz 2", "Ingrese la matriz 2", "NO válido. Ingrese una opcion valida");
                 IGMatR3 o1 = mat1.suma(mat2);
 
                 System.out.println("La suma de matrices es \n");
@@ -122,8 +107,8 @@ public class MenMat {
                 break;
 
             case 2:
-                IGMatR3 mat3 = leerMatR3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
-                IGMatR3 mat4 = leerMatR3("Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                IGMatR3 mat3 = leerMatR3("Matriz 1", "Ingrese la matriz 1", "NO válido. Ingrese una opcion valida");
+                IGMatR3 mat4 = leerMatR3("Matriz 2", "Ingrese la matriz 2", "NO válido. Ingrese una opcion valida");
                 IGMatR3 o2 = mat3.resta(mat4);
                 System.out.println("La resta de matrices es \n");
                 imprimirMatR3(o2);
@@ -131,7 +116,7 @@ public class MenMat {
             case 3:
                 double alpha = 0;
                 alpha = lec.getDouble("Ingrese el escalar", "Error ha ingresado un caracter no valido");
-                IGMatR3 mat5 = leerMatR3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                IGMatR3 mat5 = leerMatR3("Matriz 1", "Ingrese la matriz 1", "NO válido. Ingrese una opcion valida");
                 IGMatR3 res3 = mat5.escalarXmat(alpha);
                 System.out.println("La multiplicacion de una matriz por un escalar es \n");
                 imprimirMatR3(res3);
@@ -139,11 +124,11 @@ public class MenMat {
 
             case 4:
 
-                IGMatR3 mat6 = leerMatR3 ("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                IGMatR3 mat6 = leerMatR3 ("Matriz 1", "Ingrese la matriz 1", "NO válido. Ingrese una opcion valida");
                 IGVecR3 v = new IGVecR3(0,1,0);
-                v.setX(lec.getDouble("Ingrese el primer numero del vector","Error! Ha ingresado un caracter no valido"));
-                v.setY(lec.getDouble("Ingrese el segundo numero del vector","Error! Ha ingresado un caracter no valido"));
-                v.setZ(lec.getDouble("Ingrese el tercer numero del vector","Error! Ha ingresado un caracter no valido"));
+                v.setX(lec.getDouble("Ingrese el primer numero del vector", "NO válido. Ingrese una opcion valida"));
+                v.setY(lec.getDouble("Ingrese el segundo numero del vector","NO válido. Ingrese una opcion valida"));
+                v.setZ(lec.getDouble("Ingrese el tercer numero del vector", "NO válido. Ingrese una opcion valida"));
                 IGVecR3 o4 = mat6.mulvector(v);
 
                 System.out.println("La multiplicacion de matriz por vector es \n" );
@@ -154,8 +139,8 @@ public class MenMat {
 
             case 5:
 
-                IGMatR3 mat7 = leerMatR3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
-                IGMatR3 mat8 = leerMatR3("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                IGMatR3 mat7 = leerMatR3("Matriz 1", "Ingrese la matriz 1",    "NO válido. Ingrese una opcion valida");
+                IGMatR3 mat8 = leerMatR3("\n Matriz 2", "Ingrese la matriz 2", "NO válido. Ingrese una opcion valida");
                 IGMatR3 o5 = mat7.mul(mat8);
 
                 System.out.println("La multiplicacion de matrices es \n");
@@ -197,13 +182,8 @@ public class MenMat {
     }
 
     public void mostrarOpcionesMatR4() {
-        System.out.println("\t \t \t \t Matrices de orden 4");
-        System.out.println("\n 1.Suma");
-        System.out.println("\n 2.Resta");
-        System.out.println("\n 3.Multiplicacion por un escalar");
-        System.out.println("\n 4. Multiplicacion por un vector");
-        System.out.println("\n 5. Multiplicacion por una matriz");
-        System.out.println("\n 6. Regresar al menu principal");
+        System.out.println("\t \t \t \t Matrices de O4");
+        System.out.println("\n1.- Suma \n2.- Resta \n3.- Multiplicacion por un escalar \n4.- Multiplicacion por un vector \n5.- Multiplicacion por una matriz \n6.- Regresar al menu principal");
     }
 
     public int leerOpcionesMatR4() {
@@ -214,8 +194,8 @@ public class MenMat {
     public int procesarOpcionMatR4(int opcion) {
         switch (opcion) {
             case 1:
-                IGMatR4 mat1 = leerMatR4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
-                IGMatR4 mat2 = leerMatR4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                IGMatR4 mat1 = leerMatR4("Matriz 1", "Ingrese la matriz 1",    "NO válido. Ingrese una opcion valida");
+                IGMatR4 mat2 = leerMatR4("\n Matriz 2", "Ingrese la matriz 2", "NO válido. Ingrese una opcion valida");
                 IGMatR4 o1 = mat1.suma(mat2);
 
                 System.out.println("La suma de matrices es \n");
@@ -223,8 +203,8 @@ public class MenMat {
                 break;
 
             case 2:
-                IGMatR4 mat3 = leerMatR4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
-                IGMatR4 mat4 = leerMatR4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                IGMatR4 mat3 = leerMatR4("Matriz 1", "Ingrese la matriz 1",    "NO válido. Ingrese una opcion valida");
+                IGMatR4 mat4 = leerMatR4("\n Matriz 2", "Ingrese la matriz 2", "NO válido. Ingrese una opcion valida");
                 IGMatR4 res2 = mat3.suma(mat4);
                 System.out.println("La suma de matrices es \n");
                 imprimirMatR4(res2);
@@ -241,12 +221,12 @@ public class MenMat {
                 break;
 
             case 4:
-                IGMatR4 mat6 = leerMatR4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                IGMatR4 mat6 = leerMatR4("Matriz 1", "Ingrese la matriz 1", "NO válido. Ingrese una opcion valida");
                 IGVecR4 v = new IGVecR4(0, 1, 0, 0);
-                v.setX(lec.getDouble("Ingrese el primer numero del vector", "Error! Ha ingresado un caracter no valido"));
-                v.setY(lec.getDouble("Ingrese el segundo numero del vector", "Error! Ha ingresado un caracter no valido"));
-                v.setZ(lec.getDouble("Ingrese el tercer numero del vector", "Error! Ha ingresado un caracter no valido"));
-                v.setA(lec.getDouble("Ingrese el tercer numero del vector", "Error! Ha ingresado un caracter no valido"));
+                v.setX(lec.getDouble("Ingrese el primer numero del vector",  "NO válido. Ingrese una opcion valida"));
+                v.setY(lec.getDouble("Ingrese el segundo numero del vector", "NO válido. Ingrese una opcion valida"));
+                v.setZ(lec.getDouble("Ingrese el tercer numero del vector",  "NO válido. Ingrese una opcion valida"));
+                v.setA(lec.getDouble("Ingrese el tercer numero del vector",  "NO válido. Ingrese una opcion valida"));
                 IGVecR4 res4 = mat6.mulVector(v);
 
                 System.out.println("La multiplicacion de matriz por vector es \n");
@@ -257,8 +237,8 @@ public class MenMat {
                 break;
 
             case 5:
-                IGMatR4 mat7 = leerMatR4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
-                IGMatR4 mat8 = leerMatR4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                IGMatR4 mat7 = leerMatR4("Matriz 1", "Ingrese la matriz 1",    "NO válido. Ingrese una opcion valida");
+                IGMatR4 mat8 = leerMatR4("\n Matriz 2", "Ingrese la matriz 2", "NO válido. Ingrese una opcion valida");
                 IGMatR4 res5 = mat7.mul(mat8);
 
                 System.out.println("La multiplicacion de matrices es \n");
@@ -280,13 +260,13 @@ public class MenMat {
         for (int i = 1; i < 3; i++) {
             for (int j = 1; j < 3; j++) {
                 if (i == 1 && j == 1)
-                    col1.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col1.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 1 && j == 2)
-                    col2.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col2.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 2 && j == 1)
-                    col1.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col1.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 2 && j == 2)
-                    col2.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col2.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
             }
         }
         return new IGMatR2(col1,col2);
@@ -300,23 +280,23 @@ public class MenMat {
         for (int i = 1; i < 4; i++) {
             for (int j = 1; j < 4; j++) {
                 if (i == 1 && j == 1)
-                    col1.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col1.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 1 && j == 2)
-                    col2.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col2.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 1 && j == 3)
-                    col3.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col3.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 2 && j == 1)
-                    col1.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col1.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 2 && j == 2)
-                    col2.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col2.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 2 && j == 3)
-                    col3.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col3.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 3 && j == 1)
-                    col1.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col1.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 3 && j == 2)
-                    col2.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col2.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 3 && j == 3)
-                    col3.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col3.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
             }
         }
         return new IGMatR3(col1,col2,col3);
@@ -333,37 +313,37 @@ public class MenMat {
         for (int i = 1; i < 5; i++) {
             for (int j = 1; j < 5; j++) {
                 if (i == 1 && j == 1)
-                    col1.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col1.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 1 && j == 2)
-                    col2.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col2.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 1 && j == 3)
-                    col3.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col3.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 1 && j == 4)
-                    col4.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col4.setX(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 2 && j == 1)
-                    col1.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col1.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 2 && j == 2)
-                    col2.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col2.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 2 && j == 3)
-                    col3.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col3.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 2 && j == 4)
-                    col4.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col4.setY(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 3 && j == 1)
-                    col1.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col1.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 3 && j == 2)
-                    col2.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col2.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 3 && j == 3)
-                    col3.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col3.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 3 && j == 4)
-                    col4.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col4.setZ(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 4 && j == 1)
-                    col1.setA(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col1.setA(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 4 && j == 2)
-                    col2.setA(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col2.setA(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 4 && j == 3)
-                    col3.setA(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col3.setA(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
                 if (i == 4 && j == 4)
-                    col4.setA(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    col4.setA(lec.getDouble("Ingrese el valor de fila " + i + " de la columna " + j, "NO válido. Ingrese una opcion valida"));
             }
         }
         return new  IGMatR4(col1,col2,col3,col4);
