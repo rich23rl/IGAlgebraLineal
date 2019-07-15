@@ -69,9 +69,41 @@ public class IGVecR4 {
         return  Math.sqrt((Math.pow(b.x,2) + Math.pow(b.y,2) + Math.pow(b.z,2) + Math.pow(b.a,2)));
     }
 
-    public double angulo(IGVecR4 b){
-        //TODO: implementar
-        return 0.0;
+    public double angulo(IGVecR4 a, IGVecR4 b){
+        double r;
+        r = Math.acos(a.productoPunto(b)/(magnitud(a)*magnitud(b)));
+        return Math.toDegrees(r);
     }
 
+    public double getX (){
+        return x;
+    }
+
+    public void setX (double x){
+        this.x = x;
+    }
+
+    public double getY (){
+        return y;
+    }
+
+    public void setY (double y){
+        this.y = y;
+    }
+
+    public double getZ (){
+        return z;
+    }
+
+    public void setZ (double z) {
+        this.z = z;
+    }
+
+    public double getA (){
+        return a;
+    }
+
+    public void setA(double a){
+        this.a = a;
+    }
 }
