@@ -30,8 +30,8 @@ public class IGMatR3 {
     public IGMatR3 suma(IGMatR3 b){ 
         IGMatR3 r = new IGMatR3(); 
         r.setCol1(this.col1.suma(b.col1));
-        r.setCol1(this.col2.suma(b.col2));
-        r.setCol1(this.col3.suma(b.col3));
+        r.setCol2(this.col2.suma(b.col2));
+        r.setCol3(this.col3.suma(b.col3));
         return r;
     }
 
